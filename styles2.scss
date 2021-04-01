@@ -1,0 +1,12 @@
+$footerbg:#3f3f3f;
+$footercolor: #d5d5d5;
+footer{
+  background-color:$footerbg;
+  color: $footercolor;
+  padding-top: 2rem;
+}
+hr.light{
+  border-top: 1px solid $footercolor;
+  width: 75%;
+
+}

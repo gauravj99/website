@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+$maincolor:#222;
+$font:'Poppins', sans-serif;
+$max:100%;
+$one:1px;
+$bg1:#6648b1;
+$bg2:#563d7c;
+$color:rgb(40%,70%,100%);
+
+@mixin mainprop{
+	  height: $max;
+  width: $max;
+  font-family: $font;
+  color: $maincolor;
+}
+
+html{
+	@include mainprop;
+}
+body{
+@include mainprop;
+}
+
+.navbar{
+   padding: .8rem;
+ }
+.navbar-nav{
+ li{
+   padding-right: $one*20;
+}
+}
+.nav-link{
+   font-size: 1.1em !important;
+}
+.carousel-inner{
+ img{
+width: $max;
+height: $max;
+} }
+.carousel-caption{
+  position: absolute;
+  top: $max/2;
+  transform: translateY(-$max/2);
+}
+.carousel-caption{
+ h1{
+  word-spacing: $one*10;
+  font-size: $max*5;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 10px #000;
+}
+}
+.carousel-caption{
+ h3{
+  font-size: $max*2;
+  font-weight:500;
+  text-shadow: $one $one $one $one*10 #000;
+  padding-bottom: 1rem;
+}
+}
+
+
+@mixin property {
+border:1px solid $bg2;
+}
+
+
+.btn-primary{
+@include property;
+  background-color:$bg1;
+  }
+.btn-primary:hover{
+  background-color: $bg2;
+@include property;
+}
+.jumbotron{
+  padding: 1rem;
+  border-radius: 0;
+}
+.padding{
+  padding-bottom: 2rem;
+}
+.welcome{
+  width: 75%;
+  margin: 0 auto;
+padding-top: 2rem;
+}
+.welcome {hr{
+  border-top: $one*2 solid $color;
+  width: 95%;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+}
+}
+.fa-code{
+  color: #e54d26;
+}
+.fa-bold{
+  color: #563d7c;
+}
+.fa-css3{
+  color: #2163af;
+}
+
+@mixin fastyle{
+  font-size: 4em;
+  margin: 1rem;
+}
+.fa-code{
+	@include fastyle;
+}
+.fa-bold{
+@include fastyle;	
+}
+.fa-css3{
+	@include fastyle;
+}
+.social{
+  font-size: 4.5em;
+  padding: 3rem;
+}
+
+hr.light{
+  border-top: 1px solid #d5d5d5;
+  width: 75%;
+
+}
+@media (max-width: 992px) {
+  .social a{
+    font-size: 4em;
+    padding: 2rem;
+  }
+ }
+@media (max-width: 768px) {
+ .carousel-caption{
+ top:45%;
+ } 
+ .carousel-caption{
+  h1{
+  font-size: $max*3+$max/2;
+}
+ }
+ .carousel-caption {h3{
+  font-size: $max+(($max*4)/10);
+  font-weight: 400;
+  padding-bottom: .2rem;
+ }}
+ .carousel-caption .btn{
+  font-size: 95%;
+  padding: 8px 14px;
+ }
+ .display-4{
+  font-size: $max*2;
+ }
+  .social a{
+    font-size: 2.5em;
+    padding: 1.2rem;
+  }
+}
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+figure {
+  position: relative;
+  width: $max;
+  height: ($max*6)/10;
+  margin: 0!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $max;
+  height: $max;
+}
+#fixed {
+  background-image: url('img/mac.jpg');
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: $max;
+  height: $max;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+[class*="col-"] {
+    padding: 1rem;
+}
